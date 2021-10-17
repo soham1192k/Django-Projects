@@ -1,0 +1,8 @@
+{%load static%}
+<link rel="stylesheet" href="{%static 'style.css' %}"">
+<h1>Welcome</h1>
+{%if user.is_authenticated%}
+<li><a href="/logout/">Logout</a></li>
+{%else%}
+<li><a href="/login/">Login or Sign Up</a></li>
+{%endif%}
